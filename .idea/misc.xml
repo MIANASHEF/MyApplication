@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1755" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/drawable/ic_search.xml" value="0.1755" />
         <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_homeactivity.xml" value="0.18125" />
         <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_menu.xml" value="0.22" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_menu.xml" value="0.1" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_newplaylist.xml" value="0.1" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_newplaylist2.xml" value="0.1" />
         <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/menu/menu.xml" value="0.33" />
+        <entry key="..\:/Users/user65/AndroidStudioProjects/My Application3/MyApplication2/app/src/main/res/menu/nav_menu.xml" value="0.165625" />
       </map>
     </option>
   </component>

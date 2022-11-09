@@ -29,7 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.buttonRegister);
         btnCancel = findViewById(R.id.buttonCancel);
 
-        preferences = getSharedPreferences("Userinfo", 0);
+        preferences = getSharedPreferences("userinfo", 0);
     }
 
      public void register(View  view){
@@ -51,9 +51,10 @@ public class SignUpActivity extends AppCompatActivity {
           else{
          Toast.makeText(this, "Empty values, please insert!", Toast.LENGTH_SHORT).show();
               }
-                                     }
+        }
+
          public void cancel(View view){
-        Intent intert_main = new Intent(this, LoginActivity.class);
-        startActivity(intert_main);
+        Intent intent_main = new Intent(this, LoginActivity.class);
+        startActivity(intent_main);
          }
 }

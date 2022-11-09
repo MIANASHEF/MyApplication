@@ -20,6 +20,49 @@ public class LoginActivity extends AppCompatActivity {
    private final String valid_password = "1";
    SharedPreferences preferences;
 
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        editTextEmail = findViewById(R.id.editTextName);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
+        buttonSignUp = findViewById(R.id.buttonSignUp);
+
+       preferences = getSharedPreferences("userinfo", 0);
+    }
+    public void login(View view) {
+
+        String input_mail = editTextEmail.getText().toString();
+        String input_password = editTextPassword.getText().toString();
+
+        String registeredMail = preferences.getString("username","");
+        String registeredPassword = preferences.getString("password","");
+
+        if(editTextEmail.getText().toString().equals(""))
+            Toast.makeText(this, "Empty Email", Toast.LENGTH_SHORT).show();
+        else if (editTextPassword.getText().toString().equals(""))
+            Toast.makeText(this, "Empty Password", Toast.LENGTH_SHORT).show();
+
+        if(input_mail.equals(registeredMail) && input_password.equals(registeredPassword)){
+            Intent i_mail = new Intent(this, HomeActivity.class);
+            startActivity(i_mail);
+        }else{
+            Toast.makeText(this, "Incorrect credentials!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
+    public void signup(View view) {
+        Intent i_signup = new Intent(this, SignUpActivity.class);
+        startActivity(i_signup);
+    }
+
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -35,52 +78,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        editTextEmail = findViewById(R.id.editTextName);
-        editTextPassword = findViewById(R.id.editTextPassword);
-
-        buttonLogin = findViewById(R.id.buttonLogin);
-        buttonSignUp = findViewById(R.id.buttonSignUp);
-    }
-    public void login(View view) {
-
-        String input_mail = editTextEmail.getText().toString();
-        String input_password = editTextPassword.getText().toString();
-
-        String registeredMail = preferences.getString("username","");
-        String registeredPassword = preferences.getString("password","");
-
-        if(input_mail.equals(registeredMail) && input_password.equals(registeredPassword)){
-            Intent i_mail = new Intent(this, HomeActivity.class);
-            startActivity(i_mail);
-        }else{
-            Toast.makeText(this, "Incorrect credentials!", Toast.LENGTH_SHORT).show();
-        }
-
-
-        if(editTextEmail.getText().toString().equals(""))
-            Toast.makeText(this, "Empty Email", Toast.LENGTH_SHORT).show();
-        else if (editTextPassword.getText().toString().equals(""))
-            Toast.makeText(this, "Empty Password", Toast.LENGTH_SHORT).show();
-        else
-        {
-            Intent i = new Intent( this, HomeActivity.class);
-            startActivity(i);
-        }
-    }
-
-
-    public void signup(View view) {
-        Intent i_signup = new Intent(this, SignUpActivity.class);
-        startActivity(i_signup);
-    }
-
-
 
 }
